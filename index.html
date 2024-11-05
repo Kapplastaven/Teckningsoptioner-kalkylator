@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaspers dicot TO6 kalkylator</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        input, button { padding: 8px; font-size: 16px; }
+        .result { margin-top: 20px; font-weight: bold; }
+        #kopKnapp {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: none;
+        }
+        .positive { color: green; }
+        .negative { color: red; }
+    </style>
+</head>
+<body>
+
+<h1>Kaspers dicot TO6 kalkylator</h1>
+<label for="huvudaktiePris">Ange ett fiktivt pris för huvudaktien i SEK:</label>
+<input type="number" id="huvudaktiePris" step="0.01" placeholder="Ange pris"><br><br>
+
+<label>
+    <input type="checkbox" id="forutsagbartPrisCheckbox"> Förutspå pris utan nuvarande teckningsoptionspris
+</label><br><br>
+
+<div id="optionPrisInput">
+    <label for="nuvarandeOptionPris">Ange nuvarande marknadspris för teckningsoptionen i SEK:</label>
+    <input type="number" id="nuvarandeOptionPris" step="0.01" placeholder="Ange pris"><br><br>
+</div>
+
+<h2>Mina köpta teckningsoptioner</h2>
+<label>
+    <input type="checkbox" id="ingenKoptCheckbox"> Jag har inte köpt några teckningsoptioner
+</label><br><br>
+
+<div id="koptFields">
+    <label for="kopPrisOption">Ange ditt köppris för teckningsoptionen i SEK:</label>
+    <input type="number" id="kopPrisOption" step="0.01" placeholder="Ange ditt köppris"><br><br>
+
+    <label for="antalOptioner">Ange antal teckningsoptioner du har:</label>
+    <input type="number" id="antalOptioner" step="1" placeholder="Ange antal"><br><br>
+</div>
+
+<h2>Fuck the dealer</h2>
+<label>
+    <input type="checkbox" id="fuckTheDealerCheckbox"> Aktivera
+</label><br><br>
+
+<div id="fuckTheDealerFields" style="display: none;">
+    <label for="antalOptionerSalj">Ange antal teckningsoptioner du kan tänka dig att sälja för att finansiera dina aktier:</label>
+    <input type="number" id="antalOptionerSalj" step="1" placeholder="Ange antal"><br><br>
+</div>
+
+<button onclick="beraknaTeckningsoption()">Beräkna</button>
+<div class="result" id="resultat"></div>
+<button id="kopKnapp" style="display:none;">Köp</button>
+
+<script>
+// Ditt JavaScript-program för kalkylatorn (samma kod som tidigare)
+function toggleOptionPrisInput() { /* kod för funktionen */ }
+function toggleKoptFields() { /* kod för funktionen */ }
+function toggleFuckTheDealer() { /* kod för funktionen */ }
+function formatNumber(number) { /* kod för funktionen */ }
+function beraknaTeckningsoption() { /* kod för beräkningarna */ }
+</script>
+</body>
+</html>
